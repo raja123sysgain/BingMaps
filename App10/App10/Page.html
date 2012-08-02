@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bing Maps Metro style app sample</title>
+    <!-- Bing Maps references -->
+    <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript//js/veapicore.js"></script>
+</head>
+<body>
+ <div id="mapDiv">
+     
+    </div>
+
+    <script>
+        Microsoft.Maps.loadModule('Microsoft.Maps.Map', { callback: initMap });
+        function initMap() {
+ 
+
+            var userOptions =
+            {
+                credentials: "AqO2gDPEFKB0eMCLoMHwagga5rrtwhc6576cZC7VysIpJ7K-NuuNEVWdEgNEyMY6",
+                height: 800,
+                width: 1276,
+                zoom: 8,
+                mapTypeId: Microsoft.Maps.MapTypeId.road,
+                showMapTypeSelector: true
+            };
+            // creating obj for microsoft maps and displaying at metro div with the specified mapoptions
+           var user = new Microsoft.Maps.Map(document.getElementById("mapDiv"), userOptions); //
+            // Initialize the location provider
+           // var geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(user);
+
+
+            // Get the user's current location
+            // geoLocationProvider.getCurrentPosition();
+
+            //navigator.geolocation.getCurrentPosition(function (position) {
+            //    var latitude = position.coords.latitude;
+            //    var longitude = position.coords.longitude;
+            //    console.log(latitude);
+            //    console.log(longitude);
+            //    // document.write(latitude);
+
+            //    var location = new Microsoft.Maps.Location(latitude, longitude);
+            //    var pushpin = new Microsoft.Maps.Pushpin(location);
+            //    map.entities.push(pushpin);
+            //    map.setView({ center: new Microsoft.Maps.Location(latitude, longitude) });
+            //})
+
+
+
+        }
+    </script>
+</body>
+</html>
